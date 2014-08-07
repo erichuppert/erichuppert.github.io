@@ -3,7 +3,7 @@ $(document).ready(function(){
     var target = $(this);
     var parentContainer = target.closest(".question-wrap");
     parentContainer.find(".circle").removeClass("selected");
-    var value = Number.parseInt(target.text());
+    var value = parseInt(target.text());
     parentContainer.find("input").val(value);
     parentContainer.find(".check").removeClass("hide");
     target.addClass("selected");
@@ -21,7 +21,7 @@ $(document).ready(function(){
   function showScore() {
     var score = 0;
     $("input").each(function(){
-      score += Number.parseInt(this.value);
+      score += parseInt(this.value);
     })
     $("#number").text(score);
     $('.result').removeClass('hide');
