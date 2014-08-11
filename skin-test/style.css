@@ -18,11 +18,17 @@ body {
 }
 
 .subhead {
-  font-size: 30px;
+  font-size: 40px;
+  /*display: none;*/
+  margin-bottom: 0px;
+}
+
+.part2 {
+  margin-top: 60px;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .center {
@@ -35,14 +41,16 @@ body {
 
 .question, .answer-item, .check {
   float: left;
-  height: 100px;
   margin: 0;
-  line-height: 90px;
   vertical-align: middle;
 }
 
+.answer-item, .check {
+  line-height: 90px;
+}
+
 .question-wrap {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .hide {
@@ -50,9 +58,9 @@ body {
 }
 
 .question {
+  padding-top: 15px;
   width: 37%;
   font-size: 30px;
-  line-height: 90px;
 }
 
 .answer-item {
@@ -62,14 +70,25 @@ body {
 }
 
 .circle {
-  background-color: white;
+  box-sizing: content-box;
   height: 90px;
   width: 90px;
   border-radius: 50%;
   margin: 0 auto;
   font-size: 65px;
+  text-shadow:
+  -1px -1px 0 #acabaa,
+  1px -1px 0 #acabaa,
+  -1px 1px 0 #acabaa,
+  1px 1px 0 #acabaa;
+  ;
   position: relative;
-  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.circle:hover {
+  cursor: pointer;
 }
 
 
@@ -87,6 +106,7 @@ body {
 .check img {
   height: 40px;
   width: auto;
+  vertical-align: middle;
 }
 
 .darkbrown {
@@ -141,6 +161,58 @@ body {
   background-color: #947a52;
 }
 
+.pink {
+  background-color: #ee3138;
+}
+
+.burnt {
+  background-color: #b85a30;
+}
+
+.salmon {
+  background-color: #ad6865;
+}
+
+.greybrown {
+  background-color: #8d725e;
+}
+
+.freckles {
+  background-color: #e1c2a9;
+}
+
+.many {
+  background-image: url("freckles-many.png");
+}
+
+.several {
+  background-image: url("freckles-several.png");
+}
+
+.few {
+  background-image: url("freckles-few.png");
+}
+
+.veryfew {
+  background-image: url("freckles-veryfew.png");
+}
+
+.resistant {
+  background-color: #f1c9b0;
+}
+
+.normal {
+  background-color: #e2afa7;
+}
+
+.sensitive {
+  background-color: #dc9d94;
+}
+
+.verysensitive {
+  background-color: #cd8e85;
+}
+
 .result {
   text-align: center;
   margin: 20px auto;
@@ -148,16 +220,41 @@ body {
   vertical-align: middle;
 }
 
+.label {
+  line-height: normal;
+  padding-top: 5px;
+}
+
 #number {
   font-size: 70px;
 }
 
 @media (max-width: 992px) {
+  .subhead {
+    margin-bottom: 10px;
+  }
+  .question-wrap {
+    padding-top: 20px;
+  }
   .question {
     width: 100%;
+    height: auto;
+    line-height: auto;
   }
   .answer-item {
-    width: 20%;
+    width: 18.8%;
+  }
+  .check {
+    width: 6%;
+    text-align: left;
+  }
+
+  .check img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
   }
 }
 
@@ -166,11 +263,13 @@ body {
     font-size: 40px;
     width: 55px;
     height: 55px;
-    line-height: 60px
+    line-height: 55px;
+    vertical-align: middle
   }
-  .question, .answer-item {
+  .question {
     height: auto;
   }
+
   .question {
     line-height: normal;
     font-size: 25px;
