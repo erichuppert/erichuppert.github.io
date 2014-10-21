@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hana Image Code Generator</title>
+</head>
+<body>
+<div style="float:left">
+<form id="codegen" onsubmit="return createCode()">
+<table>
+	<tr>
+		<td><label>Image URL:</label></td>
+		<td><input id="image-url" name="image-url"/></td>
+	</tr>
+	<tr>
+		<td><label>Caption:</label></td>
+		<td><textarea rows="4" cols="50" name="caption"/></textarea></td>
+	</tr>
+</table>
+<input type="submit" value="Create the code">
+</form>
+<br>
+<br>
+<br>
+<label>Output:</label><br><textarea id="outputBox" rows="7" cols="50"></textarea>
+</div>
+<div style="float:left">
+	<img id="preview" style="width:300px;height:auto;padding-left:20px"/>
+</div>
+<script type="text/javascript">
+function createCode() {
+	var form = document.getElementById("codegen");
+	var imageURL = form.elements[0].value;
+	var caption = form.elements[1].value;
+	var outputBox = document.getElementById("outputBox");
+	var output = '<a href="' + imageURL + '"><div class="image-pad"><img src="' + imageURL.slice(0, imageURL.length - 4) + '-350x350.jpg"/><div class="caption"><p>' + caption + '</p></div></div></a>';
+	outputBox.value = output;
+	return false;
+}
+
+var image = document.getElementById("preview");
+var urlBox = document.getElementById("image-url");
+urlBox.addEventListener("blur", function(){
+	var imageURL = urlBox.value;
+	image.src = imageURL;
+})
+
+</script>
+</body>
+</html>
