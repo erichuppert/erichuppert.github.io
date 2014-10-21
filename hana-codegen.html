@@ -32,7 +32,7 @@ function createCode() {
 	var imageURL = form.elements[0].value;
 	var caption = form.elements[1].value;
 	var outputBox = document.getElementById("outputBox");
-	var output = '<a href="' + imageURL + '"><div class="image-pad-wrap"><div class="image-pad"><img src="' + imageURL.slice(0, imageURL.length - 4) + '-350x350.jpg"/><div class="caption"><p>' + caption + '</p></div></div></div></a>';
+	var output = '<div class="image-pad-wrap"><div class="image-pad"><a href="' + imageURL + '"><img src="' + imageURL.slice(0, imageURL.length - 4) + '-350x350.jpg"/><div class="caption"><p>' + caption + '</p></div></a></div></div>';
 	outputBox.value = output;
 	return false;
 }
