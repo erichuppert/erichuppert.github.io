@@ -4,7 +4,7 @@
     width: auto;
     height: 100vh;
     z-index: -100;
-    background-size: cover;
+    margin: 0 auto;
 }
 
 #title-text {
@@ -48,4 +48,8 @@ img {
     margin: 0 auto;
     display: block;
     max-height: 100vh;
+    max-width: 100%;
 }
+.img-pad {
+    margin-bottom: 30px;
+ }
