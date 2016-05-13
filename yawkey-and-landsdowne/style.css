@@ -1,3 +1,8 @@
+#title-box {
+    text-align: center;
+    overflow: hidden;
+}
+
 #title-video {
     min-width: 100%;
     min-height: 100%;
